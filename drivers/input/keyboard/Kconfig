@@ -142,6 +142,12 @@ config KEYBOARD_QT2160
 	  This driver can also be built as a module. If so, the module
 	  will be called qt2160.
 
+config KEYBOARD_GOLDFISH_EVENTS
+        tristate "Generic Input Event device for Goldfish"
+        help
+          no help
+
+
 config KEYBOARD_BFIN
 	tristate "Blackfin BF54x keypad support"
 	depends on (BF54x && !BF544)

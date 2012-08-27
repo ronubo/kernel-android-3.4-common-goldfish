@@ -443,6 +443,18 @@ config X86_MDFLD
 	  not contain i8259, i8254, HPET, legacy BIOS, most of the io ports.
 
 endif
+config X86_GOLDFISH
+       bool "Goldfish (Virtual Platform)"
+       depends on X86_32
+	select ARCH_GOLDFISH
+       help 
+          This option would make Goldfish virtual platform available.
+
+config ARCH_GOLDFISH
+       def_bool y
+       depends on X86_GOLDFISH
+       help 
+          This option provides is passed to emulated device drivers MMC, NAND, videoFB 
 
 config X86_RDC321X
 	bool "RDC R-321x SoC"

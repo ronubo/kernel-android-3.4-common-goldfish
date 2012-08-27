@@ -4,6 +4,21 @@
 
 menu "Misc devices"
 
+config QEMU_TRACE
+        tristate "Virtual Device for QEMU tracing"
+	help
+          This is a virtual device for QEMU tracing.
+config QEMU_PIPE
+        tristate "Virtual Device for QEMU pipes"
+	help
+          This is a virtual device for QEMU pipes.
+
+config GOLDFISH_AUDIO
+        tristate "virual goldfish audio device"
+        depends on ARCH_GOLDFISH
+        help
+          Audio driver for Goldfish Virtual Platform
+
 config SENSORS_LIS3LV02D
 	tristate
 	depends on INPUT

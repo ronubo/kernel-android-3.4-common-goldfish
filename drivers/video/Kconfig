@@ -69,6 +69,16 @@ menuconfig FB
 	  (e.g. an accelerated X server) and that are not frame buffer
 	  device-aware may cause unexpected results. If unsure, say N.
 
+config FB_GOLDFISH
+        tristate "Goldfish Framebuffer"
+        depends on FB
+        select FB_CFB_FILLRECT
+        select FB_CFB_COPYAREA
+        select FB_CFB_IMAGEBLIT
+        ---help---
+          Framebuffer driver for Goldfish Virtual Platform
+
+
 config FIRMWARE_EDID
        bool "Enable firmware EDID"
        depends on FB

@@ -1,7 +1,7 @@
 #
 # linux/drivers/mtd/devices/Makefile
 #
-
+obj-$(CONFIG_MTD_GOLDFISH_NAND)	+= goldfish_nand.o
 obj-$(CONFIG_MTD_DOC2000)	+= doc2000.o
 obj-$(CONFIG_MTD_DOC2001)	+= doc2001.o
 obj-$(CONFIG_MTD_DOC2001PLUS)	+= doc2001plus.o

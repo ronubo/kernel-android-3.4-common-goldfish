@@ -164,6 +164,11 @@ config BATTERY_DA9030
 	  Say Y here to enable support for batteries charger integrated into
 	  DA9030 PMIC.
 
+config BATTERY_GOLDFISH
+        tristate "Goldfish battery driver"
+        help
+          Say Y to enable support for the battery and AC power in the Goldfish emulator.
+
 config BATTERY_DA9052
 	tristate "Dialog DA9052 Battery"
 	depends on PMIC_DA9052

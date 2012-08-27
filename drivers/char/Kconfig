@@ -6,6 +6,12 @@ menu "Character devices"
 
 source "drivers/tty/Kconfig"
 
+config GOLDFISH_TTY
+        tristate "Goldfish TTY Driver"
+        default n
+        help 
+          TTY driver for Goldfish Virtual Platform.
+
 config DEVMEM
 	bool "Memory device driver"
 	default y
